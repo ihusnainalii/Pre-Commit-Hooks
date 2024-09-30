@@ -71,8 +71,10 @@ else
 fi
 
 END_DATE=$(date +"%s")
-END_DATE_COMMIT =$(date +"%s")
+END_DATE_COMMIT=$(date +"%s")
+
 DIFF=$(($END_DATE - $START_DATE))
 COMMIT_DIFF=$(($END_DATE_COMMIT - $START_DATE_COMMIT))
+
 echo "SwiftLint took $(($DIFF / 60)) minutes and $(($DIFF % 60)) seconds to complete."
-echo "Code Check took $(($DIFF / 60)) minutes and $(($DIFF % 60)) seconds to complete."
+echo "Code Check took $(($COMMIT_DIFF / 60)) minutes and $(($COMMIT_DIFF % 60)) seconds to complete."
