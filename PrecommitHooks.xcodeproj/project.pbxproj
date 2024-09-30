@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		954F17422CAA77EE00A40824 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 954F17412CAA77EB00A40824 /* .swiftlint.yml */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9545DCAF2CAA76CB004E21FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9545DC962CAA76CA004E21FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9545DC9D2CAA76CA004E21FE;
+			remoteInfo = PrecommitHooks;
+		};
+		9545DCB92CAA76CB004E21FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9545DC962CAA76CA004E21FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9545DC9D2CAA76CA004E21FE;
+			remoteInfo = PrecommitHooks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9545DC9E2CAA76CA004E21FE /* PrecommitHooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrecommitHooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9545DCAE2CAA76CB004E21FE /* PrecommitHooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrecommitHooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9545DCB82CAA76CB004E21FE /* PrecommitHooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrecommitHooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		954F17412CAA77EB00A40824 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9545DCA02CAA76CA004E21FE /* PrecommitHooks */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PrecommitHooks;
+			sourceTree = "<group>";
+		};
+		9545DCB12CAA76CB004E21FE /* PrecommitHooksTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PrecommitHooksTests;
+			sourceTree = "<group>";
+		};
+		9545DCBB2CAA76CB004E21FE /* PrecommitHooksUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PrecommitHooksUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9545DC9B2CAA76CA004E21FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9545DCAB2CAA76CB004E21FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9545DCB52CAA76CB004E21FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9545DC952CAA76CA004E21FE = {
+			isa = PBXGroup;
+			children = (
+				954F17412CAA77EB00A40824 /* .swiftlint.yml */,
+				9545DCA02CAA76CA004E21FE /* PrecommitHooks */,
+				9545DCB12CAA76CB004E21FE /* PrecommitHooksTests */,
+				9545DCBB2CAA76CB004E21FE /* PrecommitHooksUITests */,
+				9545DC9F2CAA76CA004E21FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9545DC9F2CAA76CA004E21FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9545DC9E2CAA76CA004E21FE /* PrecommitHooks.app */,
+				9545DCAE2CAA76CB004E21FE /* PrecommitHooksTests.xctest */,
+				9545DCB82CAA76CB004E21FE /* PrecommitHooksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9545DC9D2CAA76CA004E21FE /* PrecommitHooks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9545DCC22CAA76CB004E21FE /* Build configuration list for PBXNativeTarget "PrecommitHooks" */;
+			buildPhases = (
+				9545DC9A2CAA76CA004E21FE /* Sources */,
+				9545DC9B2CAA76CA004E21FE /* Frameworks */,
+				9545DC9C2CAA76CA004E21FE /* Resources */,
+				954F17402CAA77D400A40824 /* SwiftLint */,
+				954F17432CAA7BDF00A40824 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9545DCA02CAA76CA004E21FE /* PrecommitHooks */,
+			);
+			name = PrecommitHooks;
+			packageProductDependencies = (
+			);
+			productName = PrecommitHooks;
+			productReference = 9545DC9E2CAA76CA004E21FE /* PrecommitHooks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9545DCAD2CAA76CB004E21FE /* PrecommitHooksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9545DCC52CAA76CB004E21FE /* Build configuration list for PBXNativeTarget "PrecommitHooksTests" */;
+			buildPhases = (
+				9545DCAA2CAA76CB004E21FE /* Sources */,
+				9545DCAB2CAA76CB004E21FE /* Frameworks */,
+				9545DCAC2CAA76CB004E21FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9545DCB02CAA76CB004E21FE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9545DCB12CAA76CB004E21FE /* PrecommitHooksTests */,
+			);
+			name = PrecommitHooksTests;
+			packageProductDependencies = (
+			);
+			productName = PrecommitHooksTests;
+			productReference = 9545DCAE2CAA76CB004E21FE /* PrecommitHooksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9545DCB72CAA76CB004E21FE /* PrecommitHooksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9545DCC82CAA76CB004E21FE /* Build configuration list for PBXNativeTarget "PrecommitHooksUITests" */;
+			buildPhases = (
+				9545DCB42CAA76CB004E21FE /* Sources */,
+				9545DCB52CAA76CB004E21FE /* Frameworks */,
+				9545DCB62CAA76CB004E21FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9545DCBA2CAA76CB004E21FE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9545DCBB2CAA76CB004E21FE /* PrecommitHooksUITests */,
+			);
+			name = PrecommitHooksUITests;
+			packageProductDependencies = (
+			);
+			productName = PrecommitHooksUITests;
+			productReference = 9545DCB82CAA76CB004E21FE /* PrecommitHooksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9545DC962CAA76CA004E21FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					9545DC9D2CAA76CA004E21FE = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					9545DCAD2CAA76CB004E21FE = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 9545DC9D2CAA76CA004E21FE;
+					};
+					9545DCB72CAA76CB004E21FE = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 9545DC9D2CAA76CA004E21FE;
+					};
+				};
+			};
+			buildConfigurationList = 9545DC992CAA76CA004E21FE /* Build configuration list for PBXProject "PrecommitHooks" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9545DC952CAA76CA004E21FE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9545DC9F2CAA76CA004E21FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9545DC9D2CAA76CA004E21FE /* PrecommitHooks */,
+				9545DCAD2CAA76CB004E21FE /* PrecommitHooksTests */,
+				9545DCB72CAA76CB004E21FE /* PrecommitHooksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9545DC9C2CAA76CA004E21FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954F17422CAA77EE00A40824 /* .swiftlint.yml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9545DCAC2CAA76CB004E21FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9545DCB62CAA76CB004E21FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		954F17402CAA77D400A40824 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		954F17432CAA7BDF00A40824 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp .git/.scripts/pre-commit ./.git/hooks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9545DC9A2CAA76CA004E21FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9545DCAA2CAA76CB004E21FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9545DCB42CAA76CB004E21FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9545DCB02CAA76CB004E21FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9545DC9D2CAA76CA004E21FE /* PrecommitHooks */;
+			targetProxy = 9545DCAF2CAA76CB004E21FE /* PBXContainerItemProxy */;
+		};
+		9545DCBA2CAA76CB004E21FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9545DC9D2CAA76CA004E21FE /* PrecommitHooks */;
+			targetProxy = 9545DCB92CAA76CB004E21FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9545DCC02CAA76CB004E21FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9545DCC12CAA76CB004E21FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9545DCC32CAA76CB004E21FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PrecommitHooks/Preview Content\"";
+				DEVELOPMENT_TEAM = WV3DL6QLG2;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PrecommitHooks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9545DCC42CAA76CB004E21FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PrecommitHooks/Preview Content\"";
+				DEVELOPMENT_TEAM = WV3DL6QLG2;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PrecommitHooks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9545DCC62CAA76CB004E21FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WV3DL6QLG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PrecommitHooksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrecommitHooks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrecommitHooks";
+			};
+			name = Debug;
+		};
+		9545DCC72CAA76CB004E21FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WV3DL6QLG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PrecommitHooksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrecommitHooks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrecommitHooks";
+			};
+			name = Release;
+		};
+		9545DCC92CAA76CB004E21FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WV3DL6QLG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PrecommitHooksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PrecommitHooks;
+			};
+			name = Debug;
+		};
+		9545DCCA2CAA76CB004E21FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WV3DL6QLG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PrecommitHooksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PrecommitHooks;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9545DC992CAA76CA004E21FE /* Build configuration list for PBXProject "PrecommitHooks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9545DCC02CAA76CB004E21FE /* Debug */,
+				9545DCC12CAA76CB004E21FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9545DCC22CAA76CB004E21FE /* Build configuration list for PBXNativeTarget "PrecommitHooks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9545DCC32CAA76CB004E21FE /* Debug */,
+				9545DCC42CAA76CB004E21FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9545DCC52CAA76CB004E21FE /* Build configuration list for PBXNativeTarget "PrecommitHooksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9545DCC62CAA76CB004E21FE /* Debug */,
+				9545DCC72CAA76CB004E21FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9545DCC82CAA76CB004E21FE /* Build configuration list for PBXNativeTarget "PrecommitHooksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9545DCC92CAA76CB004E21FE /* Debug */,
+				9545DCCA2CAA76CB004E21FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9545DC962CAA76CA004E21FE /* Project object */;
+}
