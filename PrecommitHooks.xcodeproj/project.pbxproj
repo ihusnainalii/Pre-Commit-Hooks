@@ -109,7 +109,7 @@
 				9545DC9B2CAA76CA004E21FE /* Frameworks */,
 				9545DC9C2CAA76CA004E21FE /* Resources */,
 				954F17402CAA77D400A40824 /* SwiftLint */,
-				954F17432CAA7BDF00A40824 /* ShellScript */,
+				954F17432CAA7BDF00A40824 /* gitHooks */,
 			);
 			buildRules = (
 			);
@@ -259,7 +259,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		954F17432CAA7BDF00A40824 /* ShellScript */ = {
+		954F17432CAA7BDF00A40824 /* gitHooks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,13 +268,14 @@
 			);
 			inputPaths = (
 			);
+			name = gitHooks;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp ./.scripts/pre-commit ./.git/hooks\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Copy all scripts to git hooks\ncp ./.scripts/pre-commit ./.git/hooks\ncp ./.scripts/pre-commit-branch-restriction ./.git/hooks\ncp ./.scripts/pre-commit-swiftlint ./.git/hooks\ncp ./.scripts/pre-commit-unit-tests ./.git/hooks\n\n# Makes the pre-commit hook script executable\nchmod +x ./.git/hooks/pre-commit\nchmod +x ./.git/hooks/pre-commit-branch-restriction\nchmod +x ./.git/hooks/pre-commit-swiftlint\nchmod +x ./.git/hooks/pre-commit-unit-tests\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -457,7 +458,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.PrecommitHooks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.apple.io;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -487,7 +488,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.PrecommitHooks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.apple.io;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
