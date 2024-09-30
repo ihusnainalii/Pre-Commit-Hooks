@@ -74,5 +74,13 @@ fi
 
 END_DATE=$(date +"%s")
 DIFF=$(($END_DATE - $START_DATE))
+
 echo "SwiftLint took $(($DIFF / 60)) minutes and $(($DIFF % 60)) seconds to complete."
-exit $hasErrors
+
+# Show error message if hasErrors is true and exit with an error status
+if [[ $hasErrors -ne 0 ]]; then
+    echo "SwiftLint checks failed. Please fix the above issues."
+    exit 1
+fi
+
+exit 0
