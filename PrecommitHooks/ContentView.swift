@@ -18,8 +18,8 @@ struct ContentView: View {
         .padding()
     }
 
-    func add() {
-        let array: NSArray = NSArray(array: [5, 6, 7])
+    func sumUpArray(_ array: [Int] = [5, 6, 7]) {
+        let array: NSArray = NSArray(array: array)
         let numbers = array as! [Int]
         print(numbers.reduce(0, +))
     }
