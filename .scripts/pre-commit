@@ -1,25 +1,19 @@
 #!/bin/bash
 branch="$(git rev-parse --abbrev-ref HEAD)"
 
-echo ""
 echo "Current Branch: $branch"
-echo ""
 
 #----------------------------------------------------------------
 # RESTRICT BRANCHES FROM DIRECT PUSH
 #----------------------------------------------------------------
-echo ""
 echo "Running git pre-commit hook. Making sure that it's a valid branch..."
-echo ""
 
 if [ "$branch" = "main" ] || [ "$branch" = "uat" ]; then
   echo "You can't commit directly to $branch"
   exit 1
 fi
 
-echo ""
 echo "The branch is valid, moving onto the next step..."
-echo ""
 
 #----------------------------------------------------------------
 # RUN SWIFTLINT  
