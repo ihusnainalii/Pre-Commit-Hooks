@@ -6,14 +6,24 @@
 //
 
 import SwiftUI
+import SkeletonUI
 
 struct ContentView: View {
+    
+    @State var users = [String]()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Finished requesting \(users.count) users!")
+                .skeleton(with: users.isEmpty)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                        self.users = ["John Doe", "Jane Doe", "James Doe", "Judy Doe"]
+                    }
+                }
+                .frame(height: 40)
+            
+            Spacer()
         }
         .padding()
     }
