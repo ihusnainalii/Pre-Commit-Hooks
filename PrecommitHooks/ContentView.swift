@@ -17,13 +17,6 @@ struct ContentView: View {
         }
         .padding()
     }
-
-    func sumUpArray(_ array: [Int] = [5, 6, 7]) {
-        let array: NSArray = NSArray(array: array)
-        if let numbers = array as? [Int] {
-            print(numbers.reduce(0, +))
-        }
-    }
 }
 
 #Preview {

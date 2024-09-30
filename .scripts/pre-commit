@@ -77,4 +77,24 @@ if [[ $hasErrors -ne 0 ]]; then
     exit 1
 fi
 
+#----------------------------------------------------------------
+# RUN UNIT TESTS
+#----------------------------------------------------------------
+
+# Run unit tests
+echo "Running unit tests..."
+START_TEST_DATE=$(date +"%s")
+xcodebuild test -scheme PrecommitHooks -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
+
+if [[ $? != 0 ]]; then
+    echo "Unit tests failed. Please fix the issues."
+    exit 1
+fi
+
+END_TEST_DATE=$(date +"%s")
+TEST_DIFF=$(($END_TEST_DATE - $START_TEST_DATE))
+
+echo "Unit tests took $(($TEST_DIFF / 60)) minutes and $(($TEST_DIFF % 60)) seconds to complete."
+
+# Final success exit
 exit 0
