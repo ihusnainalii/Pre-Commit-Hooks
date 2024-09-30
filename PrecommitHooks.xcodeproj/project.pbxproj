@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		954F17422CAA77EE00A40824 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 954F17412CAA77EB00A40824 /* .swiftlint.yml */; };
+		955A043F2CAAB90F005AB0CF /* SkeletonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 955A043E2CAAB90F005AB0CF /* SkeletonUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				955A043F2CAAB90F005AB0CF /* SkeletonUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +122,7 @@
 			);
 			name = PrecommitHooks;
 			packageProductDependencies = (
+				955A043E2CAAB90F005AB0CF /* SkeletonUI */,
 			);
 			productName = PrecommitHooks;
 			productReference = 9545DC9E2CAA76CA004E21FE /* PrecommitHooks.app */;
@@ -203,6 +206,9 @@
 			);
 			mainGroup = 9545DC952CAA76CA004E21FE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				955A043D2CAAB90F005AB0CF /* XCRemoteSwiftPackageReference "SkeletonUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9545DC9F2CAA76CA004E21FE /* Products */;
 			projectDirPath = "";
@@ -275,7 +281,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Copy all scripts to git hooks\ncp ./.scripts/pre-commit ./.git/hooks\ncp ./.scripts/pre-commit-branch-restriction ./.git/hooks\ncp ./.scripts/pre-commit-swiftlint ./.git/hooks\ncp ./.scripts/pre-commit-unit-tests ./.git/hooks\n\n# Makes the pre-commit hook script executable\nchmod +x ./.git/hooks/pre-commit\nchmod +x ./.git/hooks/pre-commit-branch-restriction\nchmod +x ./.git/hooks/pre-commit-swiftlint\nchmod +x ./.git/hooks/pre-commit-unit-tests\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Copy all scripts to git hooks\ncp ./.scripts/pre-commit ./.git/hooks\ncp ./.scripts/pre-commit-branch-restriction.sh ./.git/hooks\ncp ./.scripts/pre-commit-swiftlint.sh ./.git/hooks\ncp ./.scripts/pre-commit-unit-tests.sh ./.git/hooks\ncp ./.scripts/verify_spm_dependencies.sh ./.git/hooks\n\n# Makes the pre-commit hook script executable\nchmod +x ./.git/hooks/pre-commit\nchmod +x ./.git/hooks/pre-commit-branch-restriction.sh\nchmod +x ./.git/hooks/pre-commit-swiftlint.sh\nchmod +x ./.git/hooks/pre-commit-unit-tests.sh\nchmod +x ./.git/hooks/verify_spm_dependencies.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -608,6 +614,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		955A043D2CAAB90F005AB0CF /* XCRemoteSwiftPackageReference "SkeletonUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CSolanaM/SkeletonUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		955A043E2CAAB90F005AB0CF /* SkeletonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 955A043D2CAAB90F005AB0CF /* XCRemoteSwiftPackageReference "SkeletonUI" */;
+			productName = SkeletonUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9545DC962CAA76CA004E21FE /* Project object */;
 }
