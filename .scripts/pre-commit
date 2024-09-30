@@ -1,14 +1,26 @@
 #!/bin/bash
-
+START_DATE_COMMIT=$(date +"%s")
 branch="$(git rev-parse --abbrev-ref HEAD)"
+
+echo ""
+echo "Current Branch: $branch"
+echo ""
 
 #----------------------------------------------------------------
 # RESTRICT BRANCHES FROM DIRECT PUSH
 #----------------------------------------------------------------
-if [ "$branch" = "master" ] || [ "$branch" = "Development" ]; then
+echo ""
+echo "Running git pre-commit hook. Making sure that its a valid branch..." 
+echo ""
+
+if [ "$branch" = "main" ] || [ "$branch" = "uat" ]; then
   echo "You can't commit directly to $branch"
   exit 1
 fi
+
+echo ""
+echo "The branch is valid, moving onto next step..."
+echo ""
 
 #----------------------------------------------------------------
 # RUN SWIFTLINT  
@@ -16,6 +28,11 @@ fi
 
 # Run SwiftLint
 START_DATE=$(date +"%s")
+
+# This line is required to make sure it works on Apple Silicon.
+if [[ "$(uname -m)" == arm64 ]]; then
+    export PATH="/opt/homebrew/bin:$PATH"
+fi
 
 SWIFT_LINT=/usr/local/bin/swiftlint
 LINT_ERROR=0
@@ -25,7 +42,7 @@ run_swiftlint() {
     local filename="${1}"
     if [[ "${filename##*.}" == "swift" ]]; then
         # Run autocorrect first
-        ${SWIFT_LINT} autocorrect --path "${filename}"
+        # ${SWIFT_LINT} autocorrect --path "${filename}"
         
         # Run lint and capture errors
         ${SWIFT_LINT} lint --path "${filename}"
@@ -54,6 +71,8 @@ else
 fi
 
 END_DATE=$(date +"%s")
-
+END_DATE_COMMIT =$(date +"%s")
 DIFF=$(($END_DATE - $START_DATE))
+COMMIT_DIFF=$(($END_DATE_COMMIT - $START_DATE_COMMIT))
 echo "SwiftLint took $(($DIFF / 60)) minutes and $(($DIFF % 60)) seconds to complete."
+echo "Code Check took $(($DIFF / 60)) minutes and $(($DIFF % 60)) seconds to complete."
