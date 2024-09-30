@@ -274,7 +274,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp .git/.scripts/pre-commit ./.git/hooks\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp ./.scripts/pre-commit ./.git/hooks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
