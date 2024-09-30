@@ -1,9 +1,4 @@
-#----------------------------------------------------------------
-# PREVENT YOUR CODEBASE GETTING SPOILED BY DEVELOPERS
-# - YOU NEED TO THIS pre-commit file (without any extension) 
-#   at ".git/hooks/" folder.
-# - THEN TRY TO PUT WRONG STYLED/LINT CODE
-#----------------------------------------------------------------
+#!/bin/bash
 
 branch="$(git rev-parse --abbrev-ref HEAD)"
 
@@ -23,24 +18,39 @@ fi
 START_DATE=$(date +"%s")
 
 SWIFT_LINT=/usr/local/bin/swiftlint
+LINT_ERROR=0
 
-# Run SwiftLint for given filename
+# Run SwiftLint for a given filename
 run_swiftlint() {
-local filename="${1}"
-if [[ "${filename##*.}" == "swift" ]]; then
-${SWIFT_LINT} autocorrect --path "${filename}"
-${SWIFT_LINT} lint --path "${filename}"
-fi
+    local filename="${1}"
+    if [[ "${filename##*.}" == "swift" ]]; then
+        # Run autocorrect first
+        ${SWIFT_LINT} autocorrect --path "${filename}"
+        
+        # Run lint and capture errors
+        ${SWIFT_LINT} lint --path "${filename}"
+        # Check if SwiftLint exited with a non-zero status (error)
+        if [ $? -ne 0 ]; then
+            LINT_ERROR=1
+        fi
+    fi
 }
 
 if [[ -e "${SWIFT_LINT}" ]]; then
-echo "SwiftLint version: $(${SWIFT_LINT} version)"
-# Run for both staged and unstaged files
-git diff --name-only | while read filename; do run_swiftlint "${filename}"; done
-git diff --cached --name-only | while read filename; do run_swiftlint "${filename}"; done
+    echo "SwiftLint version: $(${SWIFT_LINT} version)"
+    
+    # Run SwiftLint for both staged and unstaged files
+    git diff --name-only | while read filename; do run_swiftlint "${filename}"; done
+    git diff --cached --name-only | while read filename; do run_swiftlint "${filename}"; done
+    
+    # Check if there were any linting errors
+    if [ $LINT_ERROR -ne 0 ]; then
+        echo "SwiftLint found errors. Please fix them before committing."
+        exit 1
+    fi
 else
-echo "${SWIFT_LINT} is not installed. Please install it first from https://www.github.com/realm/SwiftLint"
-exit 0
+    echo "${SWIFT_LINT} is not installed. Please install it first from https://www.github.com/realm/SwiftLint"
+    exit 0
 fi
 
 END_DATE=$(date +"%s")
