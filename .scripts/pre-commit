@@ -12,7 +12,7 @@ echo "2/5: Validating the commit message format..."
 # Run commit message validation
 ./.git/hooks/commit-msg-validation.sh
 if [ $? -ne 0 ]; then
-    exit 1
+     exit 1
 fi
 
 echo "";
