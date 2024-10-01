@@ -1,23 +1,43 @@
 #!/bin/bash
 
-# Run branch restriction script
+echo "Runing Pre-commit checks"
+START_DATE=$(date +"%s")
+
+echo "";
+echo "1/5: Verifying branch to continue..."
+echo "Checking if direct commits to restricted branches (main/uat) are allowed..."
 ./.git/hooks/pre-commit-branch-restriction.sh
 if [[ $? != 0 ]]; then
   exit 1
 fi
 
+echo "";
+echo "2/5: Validating the commit message format..."
+# Run commit message validation
+./.git/hooks/commit-msg-validation.sh
+if [ $? -ne 0 ]; then
+     exit 1
+fi
+
+echo "";
+echo "3/5: Running SwiftLint to check code formatting and style..."
 # Run SwiftLint script
 ./.git/hooks/pre-commit-swiftlint.sh
 if [[ $? != 0 ]]; then
   exit 1
 fi
 
+
+echo "";
+echo "4/5: SPM verification"
 # Run the SPM verification script
 ./.git/hooks/verify_spm_dependencies.sh
 if [[ $? != 0 ]]; then
   exit 1
 fi
 
+echo "";
+echo "5/5: Unit tests failed. Please fix the issues before committing."
 # Run unit tests script
 ./.git/hooks/pre-commit-unit-tests.sh
 if [[ $? != 0 ]]; then
@@ -25,4 +45,10 @@ if [[ $? != 0 ]]; then
 fi
 
 # Exit with success
+
+END_DATE=$(date +"%s")
+DIFF=$(($END_DATE - $START_DATE))
+echo "";
+echo "Pre-commit checks passed, took $(($DIFF / 60)) minutes and $(($DIFF % 60)) seconds to complete. Proceeding with commit."
+
 exit 0

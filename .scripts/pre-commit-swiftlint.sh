@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Run SwiftLint
-START_DATE=$(date +"%s")
-
 # Apple Silicon compatibility
 if [[ "$(uname -m)" == arm64 ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
@@ -47,11 +44,6 @@ else
     echo "${SWIFT_LINT} is not installed."
     exit 0
 fi
-
-END_DATE=$(date +"%s")
-DIFF=$(($END_DATE - $START_DATE))
-
-echo "SwiftLint took $(($DIFF / 60)) minutes and $(($DIFF % 60)) seconds to complete."
 
 # Exit if there are any errors
 if [[ $hasErrors -ne 0 ]]; then
