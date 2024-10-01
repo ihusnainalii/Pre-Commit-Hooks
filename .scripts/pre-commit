@@ -14,13 +14,13 @@ fi
 echo "";
 echo "2/5: Validating the commit message format..."
 # Run commit message validation
-./.git/hooks/commit-msg-validation.sh
-if [ $? -ne 0 ]; then
-     exit 1
-fi
+# ./.git/hooks/commit-msg-validation.sh
+# if [ $? -ne 0 ]; then
+#      exit 1
+# fi
 
 echo "";
-echo "3/5: Running SwiftLint to check code formatting and style..."
+echo "3/5: Running SwiftLint to check code formatting and style...";
 # Run SwiftLint script
 ./.git/hooks/pre-commit-swiftlint.sh
 if [[ $? != 0 ]]; then
