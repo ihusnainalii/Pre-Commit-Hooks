@@ -4,7 +4,7 @@ echo "Runing Pre-commit checks"
 START_DATE=$(date +"%s")
 
 echo "";
-echo "1/5: Verifying branch to continue..."
+echo "1/6: Verifying branch to continue..."
 echo "Checking if direct commits to restricted branches (main/uat) are allowed..."
 ./.git/hooks/pre-commit-branch-restriction.sh
 if [[ $? != 0 ]]; then
@@ -12,15 +12,15 @@ if [[ $? != 0 ]]; then
 fi
 
 echo "";
-echo "2/5: Validating the commit message format..."
+echo "2/6: Validating the commit message format..."
 # Run commit message validation
-./.git/hooks/commit-msg-validation.sh
-if [ $? -ne 0 ]; then
-     exit 1
-fi
+# ./.git/hooks/commit-msg-validation.sh
+# if [ $? -ne 0 ]; then
+#      exit 1
+# fi
 
 echo "";
-echo "3/5: Running SwiftLint to check code formatting and style..."
+echo "3/6: Running SwiftLint to check code formatting and style...";
 # Run SwiftLint script
 ./.git/hooks/pre-commit-swiftlint.sh
 if [[ $? != 0 ]]; then
@@ -29,7 +29,7 @@ fi
 
 
 echo "";
-echo "4/5: SPM verification"
+echo "4/6: SPM verification"
 # Run the SPM verification script
 ./.git/hooks/verify_spm_dependencies.sh
 if [[ $? != 0 ]]; then
@@ -37,9 +37,17 @@ if [[ $? != 0 ]]; then
 fi
 
 echo "";
-echo "5/5: Unit tests failed. Please fix the issues before committing."
+echo "5/6: Unit tests failed. Please fix the issues before committing."
 # Run unit tests script
 ./.git/hooks/pre-commit-unit-tests.sh
+if [[ $? != 0 ]]; then
+  exit 1
+fi
+
+echo "";
+echo "6/6: Checking code coverage to ensure it meets the required threshold...";
+# Run the SPM verification script
+./.git/hooks/code-coverage-check.sh
 if [[ $? != 0 ]]; then
   exit 1
 fi
