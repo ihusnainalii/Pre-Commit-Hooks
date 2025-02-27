@@ -26,7 +26,7 @@ echo "Running unit tests with code coverage..."
 START_TEST_DATE=$(date +"%s")
 
 # Define variables for the Xcode build command
-SCHEME_NAME="PrecommitHooks"  # Replace with your actual scheme name
+SCHEME_NAME="PrecommitHooks"
 DESTINATION="platform=iOS Simulator,name=iPhone 16,OS=latest"
 COVERAGE_THRESHOLD=80
 

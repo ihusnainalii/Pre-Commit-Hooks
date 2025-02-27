@@ -18,7 +18,7 @@ struct ContentView: View {
                 .skeleton(with: users.isEmpty)
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                        self.users = ["John Doe", "Jane Doe", "James Doe", "Judy Doe"]
+                        self.users = ["John Doe", "Jane Doe", "James Doe", "Judy Doe", "James Doe", "Judy Doe"]
                     }
                 }
                 .frame(height: 40)
